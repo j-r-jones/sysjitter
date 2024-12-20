@@ -721,6 +721,7 @@ int main(int argc, char* argv[])
   TEST( threads = malloc(n_cores * sizeof(threads[0])) );
   g.n_threads = n_cores;
 
+  /* FIXME This ignores any input to --cores from the user */
   int cur_proc = 0;
   for (int i = 0; i != n_cores; ++i, ++cur_proc)
   {
